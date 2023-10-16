@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Cat Defense | Catalogar Zumbis</title>
+    <!-- Icon -->
+    <link rel="icon" href="./imgs/gatinho-pixel.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/registerZombie.css" />
+    <!-- JS -->
+    <script
+      src="https://kit.fontawesome.com/026675cdf7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__logo">
+          <figure>
+            <a href="./index.html">
+              <img src="./imgs/logo.png" alt="Gato preto em pixel art." />
+            </a>
+          </figure>
+        </div>
+        <div class="nav__menu-mobile">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+        <div class="nav__menu">
+          <ul class="menu__items">
+            <li class="menu__item">
+              <a href="./registerZombie.html">Catalogar Zumbis</a>
+            </li>
+            <li class="menu__item">
+              <a href="./laboratoryZombie.html"
+                >Laboratório de Chips Patólicos</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="./catalogZombie.html">Zumbis Registrados</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="main__container">
+        <div class="main__figure-zombie">
+          <figure>
+            <img
+              src="./imgs/molde-zumbi.png"
+              alt="Silhueta com fundo branco de um zumbi."
+            />
+          </figure>
+        </div>
+        <div class="main__container-register">
+          <h2>Catalogar Zumbi</h2>
+          <form action="#" class="main__register-form">
+            <div class="input-field">
+              <label for="idade-zumbi">
+                <p>Idade</p>
+                <input type="number" name="idade-zumbi" />
+              </label>
+              <label for="sexo-zumbi">
+                <p>Sexo</p>
+                <select name="sexo-zumbi" id="sexo">
+                  <option>Selecione</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Feminino</option>
+                  <option value="NI">Não informado</option>
+                </select>
+              </label>
+              <label for="tipoSangue-zombi">
+                <p>Tipo Sanguíneo</p>
+                <select name="tipoSangue-zombi" id="tipoSangue">
+                  <option>Selecione</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </label>
+            </div>
+            <div class="input-field">
+              <label for="peso-zumbi">
+                <p>Peso</p>
+                <input type="number" name="peso-zumbi" />
+              </label>
+              <label for="altura-zumbi">
+                <p>Altura</p>
+                <input type="number" name="altura-zumbi" />
+              </label>
+            </div>
+            <div class="input-field">
+              <label for="gostoMusical-zombi">
+                <p>Gosto Musical</p>
+                <select name="gostoMusical-zombi" id="gostoMusical">
+                  <option>Selecione</option>
+                  <option value="Pop">Pop</option>
+                  <option value="Rock">Rock</option>
+                  <option value="Pagode">Pagode</option>
+                  <option value="Sertanejo">Sertanejo</option>
+                  <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                  <option value="Eletrônica">Eletrônica</option>
+                  <option value="Funk">Funk</option>
+                  <option value="Metal">Metal</option>
+                  <option value="Outro">Demais gêneros estranhos</option>
+                </select>
+              </label>
+              <label for="esporte-zombi">
+                <p>Esportes</p>
+                <select name="esporte-zombi" id="esporte">
+                  <option>Selecione</option>
+                  <option value="Futebol">Futebol</option>
+                  <option value="Basquete">Basquete</option>
+                  <option value="Vôlei">Vôlei</option>
+                  <option value="Luta">Luta</option>
+                  <option value="Atletismo">Atletismo</option>
+                  <option value="eSports">eSports</option>
+                  <option value="Nenhum">Nada</option>
+                </select>
+              </label>
+            </div>
+            <div class="input-field">
+              <label for="jogo-zombi">
+                <p>Jogo Preferido</p>
+                <select name="jogo-zombi" id="jogo">
+                  <option>Selecione</option>
+                  <option value="Counter-Strike">Counter-Strike</option>
+                  <option value="Minecraft">Minecraft</option>
+                  <option value="Fortnite">Fortnite</option>
+                  <option value="The Witcher">The Witcher</option>
+                  <option value="Valorant">Valorant</option>
+                  <option value="Assassin's Creed">Assassin's Creed</option>
+                  <option value="World of Warcraft">World of Warcraft</option>
+                  <option value="FIFA">FIFA</option>
+                  <option value="League of Legends">League of Legends</option>
+                  <option value="Dota">Dota</option>
+                  <option value="Rocket League">Rocket League</option>
+                </select>
+              </label>
+            </div>
+            <div class="input-register">
+              <button type="submit" class="registerZombie">
+                Catalogar Zumbi
+                <img
+                  src="./imgs/mao_zumbi.png"
+                  alt="Mão verde de um zumbi saindo da terra em pixel art."
+                />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span
+        >Projeto para a Etapa Bônus do Desafio Coder Challenge 2023 desenvolvido
+        pela empresa Dsin -Tecnologia da Informação</span
+      >
+    </footer>
+  </body>
+  <script src="./js/main.js"></script>
+</html>

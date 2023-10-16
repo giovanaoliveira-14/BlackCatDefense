@@ -1,0 +1,164 @@
+body {
+  background: #01141a;
+}
+
+main {
+  width: 100%;
+  height: calc(100% - 95px);
+  margin: 10px 0;
+}
+
+main .main__container {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .main__container .main__figure-zombie {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .main__container .main__figure-zombie figure {
+  width: 308px;
+  height: 488px;
+}
+
+main .main__container .main__figure-zombie figure img {
+  width: 100%;
+  object-fit: contain;
+}
+
+main .main__container .main__container-register {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  gap: 78px;
+}
+
+main .main__container .main__container-register h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+main .main__container .main__container-register form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main .main__container .main__container-register form .input-field {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+main .main__container .main__container-register form .input-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+main .main__container .main__container-register form .input-field label input,
+select {
+  width: 156px;
+  height: 39px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #010000;
+  padding: 0 5px;
+  margin: 5px 0;
+}
+
+main
+  .main__container
+  .main__container-register
+  form
+  .input-field
+  label
+  select
+  option {
+  color: #010000;
+  padding: 0 5px;
+}
+
+main .main__container .main__container-register form button {
+  width: 233px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: #012925;
+  border: none;
+}
+
+main .main__container .main__container-register form .registerZombie img {
+  width: 32px;
+  height: 32px;
+}
+
+main .main__container .main__container-register form button:hover {
+  background: #224952;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+  main .main__container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    height: auto;
+    position: relative;
+  }
+  main .main__container .main__figure-zombie {
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+  }
+  main .main__container .main__container-register {
+    width: 100%;
+    z-index: 5;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main .main__container .main__container-register form .input-field {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .main__container .main__container-register form .input-field {
+    justify-content: center;
+    width: 100%;
+  }
+  main .main__container .main__container-register form .input-field label {
+    width: 100%;
+  }
+  main .main__container .main__container-register form .input-field label input,
+  select {
+    width: 100%;
+  }
+}
