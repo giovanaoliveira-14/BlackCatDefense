@@ -1,14 +1,14 @@
 body {
     background: #01141a;
-}
-
-main {
+  }
+  
+  main {
     width: 100%;
-    height: calc(100% - 95px);
-    margin: 10px 0;
-}
-
-main .main__container {
+    height: 100%;
+    margin: 20px 0;
+  }
+  
+  main .main__container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -16,90 +16,251 @@ main .main__container {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-}
-
-main .main__container .container__zombie-choice {
+    height: 500px;
+    min-height: 500px;
+    position: relative;
+  }
+  
+  main .main__container .container__zombie-choice {
     height: 100%;
-    width: 300px;
+    width: calc(100% - 10px / 3);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 31px;
-}
-
-main .main__container .container__zombie-choice .zombie-choice {
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+  }
+  
+  main .main__container .container__zombie-choice .zombie-choice {
     width: 100%;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-main .main__container .container__zombie-choice .zombie-choice label {
+  }
+  
+  main .main__container .container__zombie-choice .zombie-choice label {
     width: 272px;
     height: 40px;
-}
-
-main .main__container .container__zombie-choice .zombie-choice label select {
+  }
+  
+  main .main__container .container__zombie-choice .zombie-choice label select {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     background: #fff;
     color: #010000;
     padding: 0 5px;
-}
-
-main .main__container .container__zombie-choice .zombie-choice label select option {
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .zombie-choice
+    label
+    select
+    option {
     color: #010000;
-}
-
-main .main__container .container__zombie-choice .defense-attributes{
+  }
+  
+  main .main__container .container__zombie-choice .defense-attributes {
     width: 100%;
     height: 300px;
-}
-
-main .main__container .container__zombie-choice .defense-attributes .attributes-card{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card {
     width: 300px;
-    height: 300px;
+    min-height: 300px;
     border-radius: 5px;
-border: 1px solid #FFF;
-background: #01141A;
-position: relative;
-padding: 10px;
-}
-
-main .main__container .container__zombie-choice .defense-attributes .attributes-card .card__figure-duck{
+    border: 1px solid #fff;
+    background: #01141a;
+    padding: 15px;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card__figure-duck {
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-main .main__container .container__zombie-choice .defense-attributes .attributes-card .card__figure-duck figure{
+    position: relative;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card__figure-duck
+    figure {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: -75px;
-}
-
-main .main__container .container__zombie-choice .defense-attributes .attributes-card .card__figure-duck figure img{
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card__figure-duck
+    figure
+    img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     border-radius: 50%;
-}
-
-main .main__container .container__zombie-choice .defense-attributes .attributes-card .card__figure-duck .card_description{
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description
+    .attributes {
+    width: 100%;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description
+    .attack {
+    width: 100%;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description
+    .attack
+    p {
+    font-size: 14px;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description
+    .attributes
+    p {
+    font-size: 14px;
+  }
+  
+  main .main__container .container__figure_zombie {
+    height: 100%;
+    width: calc(100% - 10px / 3);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  main .main__container .container__figure_zombie figure {
+    width: 100%;
+    height: 100%;
+    max-width: 308px;
+    max-height: 488px;
+    object-fit: contain;
+  }
+  
+  main .main__container .container__figure_zombie figure img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 50%;
-}
-
+  }
+  
+  main .main__container .container__description-zombie {
+    height: 100%;
+    width: calc(100% - 10px / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main .main__container .container__description-zombie .description {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  main .main__container .container__description-zombie .description li {
+    list-style: none;
+    font-size: 14px;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 900px) {
+    main .main__container {
+      flex-direction: column;
+      height: auto;
+    }
+    main .main__container .container__zombie-choice {
+      order: 2;
+      z-index: 5;
+    }
+    main .main__container .container__figure_zombie {
+      position: absolute;
+    }
+  
+    main .main__container .container__figure_zombie figure {
+      max-width: 100%;
+      max-height: 100%;
+      opacity: 0.2;
+    }
+    main .main__container .container__description-zombie {
+      order: 1;
+      z-index: 5;
+    }
+    main .main__container .container__description-zombie .description{
+      align-items: center;
+      margin: 20px 0;
+    }
+  }
+  
+  @media screen and (max-width: 300px){
+    main{
+      margin: 20px 0 70px 0;
+    }
+  }
