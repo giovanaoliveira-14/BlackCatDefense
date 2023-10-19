@@ -59,11 +59,11 @@
         </div>
         <div class="main__container-register">
           <h2>Catalogar Zumbi</h2>
-          <form action="#" class="main__register-form">
+          <form id="register-zumbi" class="main__register-form">
             <div class="input-field">
               <label for="idade-zumbi">
                 <p>Idade</p>
-                <input type="number" name="idade-zumbi" />
+                <input type="number" name="idade-zumbi" id="idade" />
               </label>
               <label for="sexo-zumbi">
                 <p>Sexo</p>
@@ -71,7 +71,6 @@
                   <option>Selecione</option>
                   <option value="M">Masculino</option>
                   <option value="F">Feminino</option>
-                  <option value="NI">Não informado</option>
                 </select>
               </label>
               <label for="tipoSangue-zombi">
@@ -92,11 +91,11 @@
             <div class="input-field">
               <label for="peso-zumbi">
                 <p>Peso</p>
-                <input type="number" name="peso-zumbi" />
+                <input type="number" step="0.01"  name="peso-zumbi" id="peso" />
               </label>
               <label for="altura-zumbi">
                 <p>Altura</p>
-                <input type="number" name="altura-zumbi" />
+                <input type="number" step="0.01" name="altura-zumbi" id="altura" />
               </label>
             </div>
             <div class="input-field">
@@ -169,4 +168,5 @@
     </footer>
   </body>
   <script src="./js/main.js"></script>
+  <script src="./js/register.js"></script>
 </html>

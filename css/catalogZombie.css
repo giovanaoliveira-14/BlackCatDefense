@@ -4,7 +4,7 @@ body {
 
 main {
   width: 100%;
-  height: calc(100% - 95px);
+  min-height: calc(100% - 170px);
   margin: 10px 0;
 }
 

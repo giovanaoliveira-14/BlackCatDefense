@@ -4,8 +4,11 @@ body {
 
 main {
   width: 100%;
-  height: calc(100% - 95px);
+  min-height: calc(100% - 170px);
   margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main .main__container {
@@ -42,6 +45,7 @@ main .main__container .main__container-register {
   height: 100%;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   display: flex;
   gap: 78px;
 }
