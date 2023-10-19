@@ -36,7 +36,7 @@ const cardZumbi = (zumbi) => {
     cardZumbi.innerHTML = `
         <div class="item__figure-zumbi">
         <figure>
-        <img src=" ${imageZumbi}" alt="Imagem de um zumbi em pixel art."/>
+        <img src="./imgs/zumbis/${imageZumbi}" alt="Imagem de um zumbi em pixel art."/>
         </figure>
         </div>
         <div class="item__description">
