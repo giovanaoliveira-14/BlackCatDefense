@@ -105,6 +105,11 @@ selectZumbis.addEventListener("change", function () {
           <img src="./imgs/armas/${ataqueZumbi}">
         </div>
         `;
+
+        attribute.appendChild(defesa);
+        attribute.appendChild(ataque);
+
+
     })
    
     .catch((error) => {
