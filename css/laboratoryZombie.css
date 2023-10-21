@@ -188,6 +188,17 @@ body {
     font-size: 14px;
   }
   
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description
+    .attributes
+    .ataques-images {
+    font-size: 14px;
+  }
+  
   main .main__container .container__figure_zombie {
     height: 100%;
     width: calc(100% - 10px / 3);

@@ -45,69 +45,69 @@ fetch(url)
   });
 
 //Páginação
-const pagination = document.querySelector(".main__pagination");
-const prevPageButton = document.querySelector(".previous");
-const nextPageButton = document.querySelector(".next");
-const pageNumbers = document.querySelector(".numbers");
-const itemsPerPage = 6;
+// const pagination = document.querySelector(".main__pagination");
+// const prevPageButton = document.querySelector(".previous");
+// const nextPageButton = document.querySelector(".next");
+// const pageNumbers = document.querySelector(".numbers");
+// const itemsPerPage = 6;
 
-const zumbis = document.querySelectorAll(".catalog__item");
-const totalZumbis = zumbis.length;
-const totalPages = Math.ceil(totalZumbis / itemsPerPage);
-let currentPage = 0;
+// const zumbis = document.querySelectorAll(".catalog__item");
+// const totalZumbis = zumbis.length;
+// const totalPages = Math.ceil(totalZumbis / itemsPerPage);
+// let currentPage = 0;
 
-if (totalPages <= 1 && totalZumbis <= 6) {
-  pagination.style.display = "none";
-}
+// if (totalPages <= 1 && totalZumbis <= 6) {
+//   pagination.style.display = "none";
+// }
 
-function showPage(page) {
-  for (let i = 0; i < totalZumbis; i++) {
-    zumbis[i].style.display = "none";
-  }
-  const startIndex = page * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  for (let i = startIndex; i < endIndex && i < totalZumbis; i++) {
-    zumbis[i].style.display = "flex";
-  }
-}
+// function showPage(page) {
+//   for (let i = 0; i < totalZumbis; i++) {
+//     zumbis[i].style.display = "none";
+//   }
+//   const startIndex = page * itemsPerPage;
+//   const endIndex = startIndex + itemsPerPage;
+//   for (let i = startIndex; i < endIndex && i < totalZumbis; i++) {
+//     zumbis[i].style.display = "flex";
+//   }
+// }
 
-function updatePagination() {
-  prevPageButton.disabled = currentPage === 0;
-  nextPageButton.disabled =
-    currentPage === Math.ceil(totalZumbis / itemsPerPage) - 1;
-  pageNumbers.innerHTML = "";
-  let startPage = Math.max(currentPage - 1, 0);
-  let endPage = Math.min(currentPage + 2, totalPages - 1);
-  for (let i = startPage; i <= endPage; i++) {
-    const pageNumber = document.createElement("button");
-    pageNumber.textContent = i + 1;
-    pageNumber.classList.add("page-number");
-    if (i === currentPage) {
-      pageNumber.classList.add("current");
-    }
-    pageNumber.addEventListener("click", () => {
-      currentPage = i;
-      showPage(currentPage);
-      updatePagination();
-    });
-    pageNumbers.appendChild(pageNumber);
-  }
-  prevPageButton.disabled = currentPage === 0;
-  nextPageButton.disabled = currentPage === totalPages - 1;
-}
-prevPageButton.addEventListener("click", () => {
-  if (currentPage > 0) {
-    currentPage--;
-    showPage(currentPage);
-    updatePagination();
-  }
-});
-nextPageButton.addEventListener("click", () => {
-  if (currentPage < Math.ceil(totalZumbis / itemsPerPage) - 1) {
-    currentPage++;
-    showPage(currentPage);
-    updatePagination();
-  }
-});
-showPage(currentPage);
-updatePagination();
+// function updatePagination() {
+//   prevPageButton.disabled = currentPage === 0;
+//   nextPageButton.disabled =
+//     currentPage === Math.ceil(totalZumbis / itemsPerPage) - 1;
+//   pageNumbers.innerHTML = "";
+//   let startPage = Math.max(currentPage - 1, 0);
+//   let endPage = Math.min(currentPage + 2, totalPages - 1);
+//   for (let i = startPage; i <= endPage; i++) {
+//     const pageNumber = document.createElement("button");
+//     pageNumber.textContent = i + 1;
+//     pageNumber.classList.add("page-number");
+//     if (i === currentPage) {
+//       pageNumber.classList.add("current");
+//     }
+//     pageNumber.addEventListener("click", () => {
+//       currentPage = i;
+//       showPage(currentPage);
+//       updatePagination();
+//     });
+//     pageNumbers.appendChild(pageNumber);
+//   }
+//   prevPageButton.disabled = currentPage === 0;
+//   nextPageButton.disabled = currentPage === totalPages - 1;
+// }
+// prevPageButton.addEventListener("click", () => {
+//   if (currentPage > 0) {
+//     currentPage--;
+//     showPage(currentPage);
+//     updatePagination();
+//   }
+// });
+// nextPageButton.addEventListener("click", () => {
+//   if (currentPage < Math.ceil(totalZumbis / itemsPerPage) - 1) {
+//     currentPage++;
+//     showPage(currentPage);
+//     updatePagination();
+//   }
+// });
+// showPage(currentPage);
+// updatePagination();
