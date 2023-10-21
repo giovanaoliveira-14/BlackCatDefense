@@ -61,6 +61,8 @@ selectZumbis.addEventListener("change", function () {
       const inteligenciaZumbi = zumbi.intelligence;
       const perigoZumbi = zumbi.dangerousness;
       const descricaoZumbi = faqueza.description;
+      const defesaZumbi = defesa.image;
+      const ataqueZumbi = ataque.image;
 
       informacoesZumbi.innerHTML = `
         <div>
@@ -93,14 +95,14 @@ selectZumbis.addEventListener("change", function () {
         defesa.innerHTML = `
         <p>Atributos de defesa:</p>
         <div class="images">
-          <img src="./imgs/defesa/">
+          <img src="./imgs/defesa/${defesaZumbi}">
         </div>
         `;
 
         ataque.innerHTML = `
         <p>Ataques:</p>
         <div class="images">
-          <img src="./imgs/armas/">
+          <img src="./imgs/armas/${ataqueZumbi}">
         </div>
         `;
     })
