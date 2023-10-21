@@ -3,8 +3,14 @@ const container_description = document.querySelector(
   ".container__description-zombie"
 );
 
+const attribute = document.querySelector(".card_description")
+
 const informacoesZumbi = document.createElement("ul");
 informacoesZumbi.classList.add("description");
+const defesa = document.createElement("div");
+defesa.classList.add("attributes");
+const ataque = document.createElement("div");
+ataque.classList.add("attributes");
 
 // Consumir a API
 const url = "https://api-blackcat-defense.vercel.app/v1/zumbis";
@@ -35,7 +41,10 @@ selectZumbis.addEventListener("change", function () {
   fetch(Url)
     .then((response) => response.json())
     .then((data) => {
-      let zumbi = data.data;
+      let zumbi = data.data.zumbi;
+      let faqueza = data.data.weakness;
+      let defesa = data.data.defense;
+      let ataque =  data.data.counter;
 
       const idZumbi = zumbi.zumbi_id;
       const imageZumbi = zumbi.image;
@@ -51,7 +60,7 @@ selectZumbis.addEventListener("change", function () {
       const velocidadeZumbi = zumbi.velocity;
       const inteligenciaZumbi = zumbi.intelligence;
       const perigoZumbi = zumbi.dangerousness;
-
+      const descricaoZumbi = faqueza.description;
 
       informacoesZumbi.innerHTML = `
         <div>
@@ -76,11 +85,26 @@ selectZumbis.addEventListener("change", function () {
 
         <div>
         <li><b> Periculosidade</b>:  ${perigoZumbi}</li>
-        <li><b>Pontos fracos</b>: Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</li>
+        <li><b>Pontos fracos</b>:  ${descricaoZumbi}</li>
         </div>`;
 
         container_description.appendChild(informacoesZumbi);
+
+        defesa.innerHTML = `
+        <p>Atributos de defesa:</p>
+        <div class="images">
+          <img src="./imgs/defesa/">
+        </div>
+        `;
+
+        ataque.innerHTML = `
+        <p>Ataques:</p>
+        <div class="images">
+          <img src="./imgs/armas/">
+        </div>
+        `;
     })
+   
     .catch((error) => {
       console.error("Erro na requisição à API:", error);
     });

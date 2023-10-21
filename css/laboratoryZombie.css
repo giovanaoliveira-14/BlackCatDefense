@@ -186,6 +186,7 @@ body {
     .attributes
     p {
     font-size: 14px;
+    margin: 5px 0;
   }
   
   main
@@ -195,8 +196,26 @@ body {
     .attributes-card
     .card_description
     .attributes
-    .ataques-images {
-    font-size: 14px;
+    .images {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 60px;
+  }
+  
+  main
+    .main__container
+    .container__zombie-choice
+    .defense-attributes
+    .attributes-card
+    .card_description
+    .attributes
+    .images img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
   }
   
   main .main__container .container__figure_zombie {
@@ -241,6 +260,22 @@ body {
   main .main__container .container__description-zombie .description li {
     list-style: none;
     font-size: 14px;
+  }
+  
+  main .main__container .container__description-zombie .description li .images{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 5px;
+   height: 60px;
+   margin: 5px 0;
+  }
+  
+  main .main__container .container__description-zombie .description li .images img{
+   width: 60px;
+   height: 60px;
+   object-fit: contain;
   }
   
   /* Responsive */
