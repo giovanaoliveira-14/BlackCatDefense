@@ -7,11 +7,10 @@ const attribute = document.querySelector(".card_description")
 
 const informacoesZumbi = document.createElement("ul");
 informacoesZumbi.classList.add("description");
-const defesa = document.createElement("div");
-defesa.classList.add("attributes");
-const ataque = document.createElement("div");
-ataque.classList.add("attributes");
-
+const informacoesDefesa = document.createElement("div");
+informacoesDefesa.classList.add("attributes");
+const informacoesAtaque = document.createElement("div");
+informacoesAtaque.classList.add("attributes");
 // Consumir a API
 const url = "https://api-blackcat-defense.vercel.app/v1/zumbis";
 
@@ -46,6 +45,9 @@ selectZumbis.addEventListener("change", function () {
       let defesa = data.data.defense;
       let ataque =  data.data.counter;
 
+      console.log("Ataque: ", ataque);
+      console.log("Defesa: ", defesa);
+
       const idZumbi = zumbi.zumbi_id;
       const imageZumbi = zumbi.image;
       const idadeZumbi = zumbi.age;
@@ -60,9 +62,12 @@ selectZumbis.addEventListener("change", function () {
       const velocidadeZumbi = zumbi.velocity;
       const inteligenciaZumbi = zumbi.intelligence;
       const perigoZumbi = zumbi.dangerousness;
+
       const descricaoZumbi = faqueza.description;
       const defesaZumbi = defesa.image;
       const ataqueZumbi = ataque.image;
+      const defesaDescricao = defesa.description;
+      const ataqueDescricao = ataque.description;
 
       informacoesZumbi.innerHTML = `
         <div>
@@ -92,24 +97,23 @@ selectZumbis.addEventListener("change", function () {
 
         container_description.appendChild(informacoesZumbi);
 
-        defesa.innerHTML = `
+        informacoesDefesa.innerHTML=`
         <p>Atributos de defesa:</p>
         <div class="images">
-          <img src="./imgs/defesa/${defesaZumbi}">
+          <img src="./imgs/defesa/${defesaZumbi}" alt="${defesaDescricao}">
         </div>
         `;
 
-        ataque.innerHTML = `
+        informacoesAtaque.innerHTML=`
         <p>Ataques:</p>
         <div class="images">
-          <img src="./imgs/armas/${ataqueZumbi}">
+          <img src="./imgs/defesa/${ataqueZumbi}" alt="${ataqueDescricao}">
         </div>
         `;
 
-        attribute.appendChild(defesa);
-        attribute.appendChild(ataque);
 
-
+        attribute.appendChild(informacoesDefesa);
+        attribute.appendChild(informacoesAtaque);
     })
    
     .catch((error) => {
